@@ -1,4 +1,5 @@
 using NumbersToWords.Models;
+using System.Collections.Generic;
 using System;
 class Program
 {
@@ -40,16 +41,27 @@ class Program
     // Console.WriteLine("So the result is: " + result);
 
     // # 3 Find and replace with string game 
+    // Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
+    // Console.WriteLine("Welcome to the Find Word and Replace App!");
+    // Console.WriteLine("Please enter in a original string: ");
+    // string choiceString = Console.ReadLine();
+    // Console.WriteLine("Please enter in a word to search for: ");
+    // string searchWord = Console.ReadLine();
+    // Console.WriteLine("Please enter in a replace word: ");
+    // string replaceWord = Console.ReadLine(); 
+    // FandP myFandPobj = new FandP(choiceString,searchWord,replaceWord);
+    // Console.WriteLine(myFandPobj.findAndReplace());
+
+    // # 4 Prime Sifting
     Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
-    Console.WriteLine("Welcome to the Find Word and Replace App!");
-    Console.WriteLine("Please enter in a original string: ");
-    string choiceString = Console.ReadLine();
-    Console.WriteLine("Please enter in a word to search for: ");
-    string searchWord = Console.ReadLine();
-    Console.WriteLine("Please enter in a replace word: ");
-    string replaceWord = Console.ReadLine(); 
-    FandP myFandPobj = new FandP(choiceString,searchWord,replaceWord);
-    Console.WriteLine(myFandPobj.findAndReplace());
-  
+    Console.WriteLine("Welcome to the Prime Sifting App!");
+    Console.WriteLine("Please enter in a number : ");
+    int userInput = int.Parse(Console.ReadLine());
+    PrimeNumber priNumbers = new PrimeNumber(userInput);
+    List<int> results = priNumbers.calPrimeNumber();
+    foreach(int item in results)
+    {
+      Console.WriteLine("Prime Numbers: " + item);
+    }
   }
 }
